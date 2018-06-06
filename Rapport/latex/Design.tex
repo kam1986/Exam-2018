@@ -107,7 +107,10 @@ In the tables before, we have identified the main responsibilities and their ass
 	\item[] \textbf{LevelParser} -- LevelParer is an iparser, an implementation as given a list of strings making all level entities, which level can accept.
 	\item[] \textbf{Loader} -- is an IFetcher implementation, it takes a filepath and returns a list of strings that the file constitutes and removes any blank lines.\\
 \end{itemize}
-
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{UML}
+	\caption{UML representation of our Loader and Level implementation}
+\end{figure}
 \textbf{SpaceTaxiEntities}
 \begin{itemize}
 	\item[] \textbf{ICollision} -- is an interface that all the SpaceTaxiEntities will implement, except the player. Uses a boolean CollidWith.
