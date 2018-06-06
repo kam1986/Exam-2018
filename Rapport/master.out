@@ -2,7 +2,6 @@
 \BOOKMARK [1][-]{section.2}{2 Background}{}% 2
 \BOOKMARK [1][-]{section.3}{3 Analysis}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{3.1 Requirements for Space Taxi}{section.3}% 4
-<<<<<<< HEAD
 \BOOKMARK [1][-]{section.4}{4 Design}{}% 5
 \BOOKMARK [2][-]{subsection.4.1}{4.1 Design decisions}{section.4}% 6
 \BOOKMARK [2][-]{subsection.4.2}{4.2 The overall structure of the game}{section.4}% 7
@@ -20,24 +19,3 @@
 \BOOKMARK [2][-]{subsection.7.3}{7.3 10g Implementation}{section.7}% 19
 \BOOKMARK [2][-]{subsection.7.4}{7.4 Ambiguities in exercise sets}{section.7}% 20
 \BOOKMARK [1][-]{section.8}{8 Conclusion}{}% 21
-=======
-\BOOKMARK [1][-]{section.4}{4 MAYBE TALK A LITTLE ABOUT DIKUARCADE}{}% 5
-\BOOKMARK [1][-]{section.5}{5 Goals in general ***** NOT DONE *****}{}% 6
-\BOOKMARK [1][-]{section.6}{6 Design}{}% 7
-\BOOKMARK [2][-]{subsection.6.1}{6.1 Design decisions}{section.6}% 8
-\BOOKMARK [2][-]{subsection.6.2}{6.2 The overall structure of the game}{section.6}% 9
-\BOOKMARK [2][-]{subsection.6.3}{6.3 How well did we follow the SOLID principles?}{section.6}% 10
-\BOOKMARK [1][-]{section.7}{7 Implementation}{}% 11
-\BOOKMARK [2][-]{subsection.7.1}{7.1 Implementation of SpaceTaxi}{section.7}% 12
-\BOOKMARK [1][-]{section.8}{8 User Guide}{}% 13
-\BOOKMARK [2][-]{subsection.8.1}{8.1 Game guide}{section.8}% 14
-\BOOKMARK [1][-]{section.9}{9 Evaluation}{}% 15
-\BOOKMARK [2][-]{subsection.9.1}{9.1 How we designed and implemented the tests}{section.9}% 16
-\BOOKMARK [2][-]{subsection.9.2}{9.2 The non-trivial parts of our implementation}{section.9}% 17
-\BOOKMARK [3][-]{subsubsection.9.2.1}{9.2.1 LevelParser}{subsection.9.2}% 18
-\BOOKMARK [3][-]{subsubsection.9.2.2}{9.2.2 Collision}{subsection.9.2}% 19
-\BOOKMARK [3][-]{subsubsection.9.2.3}{9.2.3 Movement}{subsection.9.2}% 20
-\BOOKMARK [2][-]{subsection.9.3}{9.3 10g Implementation}{section.9}% 21
-\BOOKMARK [2][-]{subsection.9.4}{9.4 Ambiguities in exercise sets}{section.9}% 22
-\BOOKMARK [1][-]{section.10}{10 Conclusion}{}% 23
->>>>>>> 08b07d07f8721d17f006645a23da22c988ff10a9
