@@ -1,3 +1,6 @@
+\documentclass[../master.tex]{subfile}
+\begin{document}
+
 \section{Implementation}
 \subsection{Implementation of SpaceTaxi}
 Our implementation of the game Space Taxi is a C\# Console Project created in Jet Brains Rider. We have chosen to create our unit tests in an neighboring NUnit Library Project. The main entry point is in our Program.cs file which is responsible for calling an instance of Game.Loop from our Game.cs file. The Game.cs file is the most important file though, as it is subscribes to all events that happen while the game is running.\\
@@ -37,3 +40,5 @@ This public class inherits both from our ICollision interface and Entity in DIKU
 
 \textbf{Portal}
 Inherits from ICollision interface and Entity in DIKUArcade. This public class faciliates the passage between levels.
+
+\end{document}

@@ -1,20 +1,12 @@
-<<<<<<< HEAD:SU18-Exercises/Exam2018/Rapport/latex/Design.tex
 \documentclass[../master.tex]{subfile}
-
-\newpage
 \begin{document}
-=======
 
->>>>>>> cf292befba5a6c769d604a223aa965783f850aa4:SU18-Exercises/Exam-2018/Rapport/latex/Design.tex
 \section{Design}
 One of our most important design goals is to make the program as conceptually sane and maintainable as possible (see \hyperref[sec:Goal3]{goal 3}). Moreover, by having to build on DIKUArcade and meeting all of the given requirements (see \hyperref[sec:Goal1]{goal 1}), it has had a great impact on our design decisions.
 
 \subsection{Design decisions}
 In the following first table we have created a responsibility table, where we describe some concepts of our design we need to implement for \textit{Space Taxi}.
 \renewcommand{\arraystretch}{1.5}
-
-\newpage
-
 \begin{table}[h]
 	\centering
 	\label{my-label}
@@ -30,6 +22,8 @@ In the following first table we have created a responsibility table, where we de
 		Non-moving entities.                         & Obstacle                                   \\ \hline
 	\end{tabular}
 \end{table}
+
+\newpage
 
 In the following table we will deduct the associations between our concepts of the design. I.e. how our concepts are related.
 \renewcommand{\arraystretch}{1.5}
@@ -177,4 +171,5 @@ The dependency inversion is about that high-level modules should not depend on l
 
 \noindent\textbf{Conclusion}\\
 Overall, we think we have done the best to follow the SOLID Principles, but as we know, where are always things that can be improved. We haven't used some of the SOLID Principles as much as the others. That could for example be the Liskov substition principle. In our code, we have not used this principle as much, because we have chosen to implement our code leaning more heavily on the simpler, Open-Closed principle.
+
 \end{document}

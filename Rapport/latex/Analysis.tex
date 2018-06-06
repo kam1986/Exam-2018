@@ -1,44 +1,32 @@
-\documentclass[../master.tex]{subfiles}
-
+\documentclass[../master.tex]{subfile}
 \begin{document}
+
 \section{Analysis}
-Our goals for this final deliverable is stated down below. This section will explain these goals, the relevance of them and what specifications that are required in this project.\\
+Our goals for this final deliverable is stated down below. This section will explain these goals, the relevance of them and what specifications that are required in this project.
 \label{sec:Goals}
 
-\textbf{Goal 1} We need to meet the requirements of \textit{deliverables} 7-10.\\
-\label{sec:Goal1}
-
-\textbf{Goal 2} We have to utilize sensible design patteren where they are relevant.\\
-
-\textbf{Goal 3} We want the code to be maintainable and readable (Refactoring).\\
-\label{sec:Goal3}
-
-\textbf{Goal 4} The code should be designed in terms of individually testable methods and classes, which means they should be suitable for unit-testing.\\
-
-\textbf{Goal 5} We want to design the project for further extensibility (Refactoring).\\
-
-\textbf{Goal 6} We want to have the code follow the coding style provided to us, as well as follow the .NET Framework Naming Guidelines.
-\label{sec:Goal6}
-
 \subsection*{Goal 1: Meeting the requirements}
-This goal is one of the most important goals we have. It concerns about the functionality and requirements of our game. It helps us making sure that our game moving towards a playable game. The \hyperref[sec:Requirements]{requirements} of the \textit{deliverables} all sum up to be the finished game.
+\label{sec:Goal1}
+This goal is one of the most important goals we have. It concerns about the functionality and requirements of our game. It helps us making sure that our game moving towards a playable game. We need to meet the \hyperref[sec:Requirements]{requirements} of the \textit{deliverables} 7-10, which all sum up to be the finished game.
 
 \subsection*{Goal 2: Design patterns}
-This goal concerns design patterns. In software development, a design pattern is a general, and reusable solution to a commonly occurring problem within a given context in software design. There exists many different design patterns and each of them are used for different things, while some also recalls other patterns. The approach of using a design pattern can be rewarding for the code quality and can help solve a given problem. The approach can be recognized by many other developers who have to read, understand and edit the code, which also helps supporting \hyperref[sec:Goal3]{goal 3} and \hyperref[sec:Goal6]{goal 6}, as it standardizes the code. This is one of our goals, since we have to research different design patterns and get to learn using them in some different occasions.
+This goal concerns utilizing sensible design patterns, where they are relevant. In software development, a design pattern is a general, and reusable solution to a commonly occurring problem within a given context in software design. There exists many different design patterns and each of them are used for different things, while some also recalls other patterns. The approach of using a design pattern can be rewarding for the code quality and can help solve a given problem. The approach can be recognized by many other developers who have to read, understand and edit the code, which also helps supporting \hyperref[sec:Goal3]{goal 3} and \hyperref[sec:Goal6]{goal 6}, as it standardizes the code. This is one of our goals, since we have to research different design patterns and get to learn using them in some different occasions.
 
 \subsection*{Goal 3: Maintainability}
-This goal concerns making the code understandable and accessible to other developers who may want to change it. This can be achieved by using names that is appropriate to what each method, class or variable is meant to do. By writing a good documentation will also allow readers to form better mental overview over any solution, and will together with explicit names create a code, that is much more readable. Then updating the code it may also fix flaws thay may be hiding in the program. By keeping the SOLID principles in mind, when designing it will also do much for the maintainability of the code.\\
+\label{sec:Goal3}
+This goal concerns making the code maintainable, understandable and accessible to other developers who may want to change it. This can be achieved by using names that is appropriate to what each method, class or variable is meant to do. By writing a good documentation will also allow readers to form better mental overview over any solution, and will together with explicit names create a code, that is much more readable. Then updating the code it may also fix flaws thay may be hiding in the program. By keeping the SOLID principles in mind, when designing it will also do much for the maintainability of the code.\\
 
 The maintainability of this project is a very important part of the development for us, as we are developing the project in a group. We have been sitting together during the designing of the code, and communicated about the design and the quality, ensuring that the code would be readable by everyone in the group. This was important since we were working on differnt parts of the code at the same time. In this deliverable we will return to old pieces of code, which we have to refresh our minds with and do some refactoring, that will make it easier for other people to read.
 
 \subsection*{Goal 4: Tests} 
-Tests can be coded to ensure that methods and classes actually do what they are supposed to do. Tests are also able to help exposing if there are any bugs located in the code. By having tests which checks troughout the program, that the units of the code functions as intended, will improve maintainability, as supports \hyperref[sec:Goal3]{goal 3}. If new changes are made, any unintended effects should be caught by the test. That means all classes that we have written requires testing, except the game class, as this heavily relies on the GaneEventBus (has already been tested).
+This goal concerns tests. Tests can be coded to ensure that methods and classes actually do what they are supposed to do. Tests are also able to help exposing if there are any bugs located in the code. By having tests which checks troughout the program, that the units of the code functions as intended will improve maintainability, and it supports \hyperref[sec:Goal3]{goal 3}. If new changes are made, any unintended effects should be caught by the test. That means all classes that we have written requires testing, except the game class, as this heavily relies on the GaneEventBus (has already been tested). The code should also be designed, so methods and classes are suitable for unit-testing.
 
 \subsection*{Goal 5: Design for extensibility}
-Extensibility is a software development and systems design principle where the implementation takes future growth into consideration. The goal here is to accomodate for expected future additions to avoid the need for some major refactoring in order to include additions to the program, while also maintaining a reasonable structure.
+This goal concerns designing the project for further extensibility. Extensibility is a software development and systems design principle where the implementation takes future growth into consideration. The goal here is to accomodate for expected future additions to avoid the need for some major refactoring in order to include additions to the program, while also maintaining a reasonable structure.
 
 \subsection*{Goal 6: Coding style}
-In this project we should stick to a specific guideline for coding style and naming. This will in many cases, help readers to get an better overview of a code. By using one guideline it also helps ourselves as it will keep away unnecessary confusion which may or may not lead to errors. In our group we have done our best to follow the guideline provided to us, as well as to follow the naming guidelines which are stated on Microsoft's website. This goal impacts on readability, which also supports \hyperref[sec:Goal3]{goal 3}.
+\label{sec:Goal6}
+In this project we should stick to a specific guideline for coding style and naming. This will in many cases, help readers to get an better overview of a code. By using one guideline it also helps ourselves as it will keep away unnecessary confusion which may or may not lead to errors. In our group we have done our best to follow the guideline provided to us, as well as to follow the naming guidelines which are stated by the .NET Framework Naming Guidelines. This goal impacts on readability, which also supports \hyperref[sec:Goal3]{goal 3}.
 
 \subsection{Requirements for Space Taxi}
 \label{sec:Requirements}
@@ -59,7 +47,7 @@ The game should be a single-player game, where the player will be introduced wit
 To interact with the main-menu and the game, the game needs the implementations:\\
 For instance, to interact with the menu:\\
 \begin{wrapfigure}{l}{0.03\textwidth}
-	\vspace{-6.2mm}
+	\vspace{-1.8mm}
 	\begin{centering}
 		\includegraphics[width=0.04\textwidth]{./Pictures/Pil_op.png}
 	\end{centering}
@@ -156,15 +144,4 @@ Design goals relating to coding style:
 	\item The game should be designed so it has a state machine, that will handle the different states, such as when game is in the main menu, when the game is running, when the game is paused and quit game. As well when the ship collides with obstacles, it should explode, when it comes near a platform, it should land and when it collides with the teleporter, it should change the level. Furthermore, be able to transition between the different states, changing which state is active.
 \end{enumerate}
 
-
-<<<<<<< HEAD:SU18-Exercises/Exam2018/Rapport/latex/Analysis.tex
-\section{MAYBE TALK A LITTLE ABOUT DIKUARCADE}
-
-\section{Goals in general ***** NOT DONE *****}
-\begin{enumerate}
-	\item  
-\end{enumerate}
 \end{document}
-=======
->>>>>>> cf292befba5a6c769d604a223aa965783f850aa4:SU18-Exercises/Exam-2018/Rapport/latex/Analysis.tex
-
