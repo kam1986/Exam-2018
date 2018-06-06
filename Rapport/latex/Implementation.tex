@@ -1,0 +1,39 @@
+\section{Implementation}
+\subsection{Implementation of SpaceTaxi}
+Our implementation of the game Space Taxi is a C\# Console Project created in Jet Brains Rider. We have chosen to create our unit tests in an neighboring NUnit Library Project. The main entry point is in our Program.cs file which is responsible for calling an instance of Game.Loop from our Game.cs file. The Game.cs file is the most important file though, as it is subscribes to all events that happen while the game is running.\\
+
+\textbf{StateMachine}
+is an implementation we have done so the game handle different states. The states are for example if the player are in the main menu (state MainMenu), pressing either ``New Game`` or ``Quit``. If the player starts the game, the state that will be happening is ``GameRunning''. When the player pauses the game, it is a state too (state GamePaused). Inside the GamePaused state, the player can also quit or start a new game, which will be the ``New Game`` state, and the ``Quit`` state. When the player telports to the next area using the portal, the state event it uses is the ``Next Level`` state.\\
+
+\textbf{Player} (and Physics from TrvialMovements class):\\
+In the Player class here we handles everything there is about the player. That contains the ships orientation, its images for the ship and thrusters (which will animate), when the player hits an obstacle it will explode, the player speed, and uses the implementation of physics from the ``TrivialMovements`` class to simulate physics. It handles as well when a key is pressed, what will happen when key-left is pressed, key-right and key-up, as well as when they are released again. These physics makes the Taxi movement feel more realistic and simulate gravity. We have moved the Player event handling from Game to player, and made it static too.\\
+
+\textbf{ICollision}
+This is a interface and therefore the classes that have assets that can either be collided with or landed on can inherit from this interface. The interface has a method which is returns a bool that indicates if collision has occurred or not.
+
+\textbf{Level}
+Level is a IGameState, and is the main part of the game, it handle all rendering and collision checking of entities with the player, It hold all objects for the game except from player.\\
+
+\textbf{Loader}
+Inheritance from the interface IFetcher. This public class opens a stream and reads the strings that are created in IFetcher. The Loader Class load all the text from the file into a string list and filter all empty strings away from the data.\\
+
+\textbf{LevelParser}
+This is a public class which take the simple structure from a Ifetcher and structure it into all the game Entities, find the location and orientation of the player. It use the interface IParser which make constrains on how the expected output are accessed from outside. The LevelParser are structured so, that it does not need to take a specific size of map, say 40 times 23, as long as the map is consistence\footnote{each line in the map has same length} it will parse it.\\
+
+\textbf{IParser}
+This is a public interface that is responsible for our LevelParser Class returns the correct piece.\\
+
+\textbf{IFetcher}
+This Interface are used by any loader which the parser shall use, it gives a standard of what to except of the loader.\\
+
+\textbf{Platform}
+Inheritance from ICollision and Entity. Rather straightforward, this public class' primary function is to be a helper class for collision detection for both the Taxi and the Customer.\\
+
+\textbf{Obstacle} 
+Inheritance from ICollision and Entity in DIKUArcade. This public class takes a shape and an image and creates the obstacles in the game.\\
+
+\textbf{Customers}
+This public class inherits both from our ICollision interface and Entity in DIKUArcade. The customer is given movement and boundaries so that it doesn't walk off the edges of the platforms.\\
+
+\textbf{Portal}
+Inherits from ICollision interface and Entity in DIKUArcade. This public class faciliates the passage between levels.

@@ -1,0 +1,70 @@
+\documentclass[../master.tex]{subfile}
+\begin{document}
+\section{Evaluation}
+\subsection{How we designed and implemented the tests}
+We has had a lot of problem with the NUnit testing framework and therefore hasn't implemented any test.  
+\\
+\\
+Most of our test, has been made along the process of the design of the game in general. We do not test Implementation which only relay on DIKUArcade entities and their methods, since we assume that those are well tested.
+\begin{itemize}
+\item For the Loader, we have tried to do some testing. here we are testing that the loader response accordingly to the expected behavior. This includes what happens when the file isn't are missing, corrupt and under normal behavior.
+\item The parser we intended to do some unit testing but also a little integration testing. Since the LevelParser only can get input through an implementation of IFetcher, we needs to test if it gets one or not, then we would test through a dummy Ifetcher implementation that the LevelParser git the expected output. That all obstacles, platforms, portals are there and the taxi are set at the right position and orientation. This are trivial since all thoughs data are output of the class.
+\item IMovement Implementations, are quiet hard to test since, we needs to check if it moves the entity as intended. This would be done by setting a level through the dummie from the LevelParser test, and then call the move method once, then check if it works as intended.
+\item ICollsion, we would test as IMovement, we would set up different levels which takes into account all situations like the taxi colliding with an obstacle, platform or landing.
+
+\end{itemize}
+Since all game entities are inheriting DIKUArcade Entity and only implement the ICollision interface we has already tested all that isn't the Entity part.
+
+\subsection{The non-trivial parts of our implementation}
+\subsubsection{LevelParser}
+To efficient parse the text to a level, we choose to first split the string list up to several pieces, as the map represented as a list of strings and an image dictionary. Most of the entities are actually first created when asked for, the further preprocessing of the data before creating the entities, enhance the simplicity of how to create entities and searching for the different part of the data.
+
+\subsubsection{Collision}
+The Collision was difficult to design so that it was highly adaptively and easily implemented. We have used a Interface to conform the collision process, since we wished to use our collision design to handle all collision as collision with obstacles, platforms and portals, but also the customers collision with the edges of the platforms. The interfaces makes this possible since we now can us polymorphism to run the checking over all implementation of collision. This Design made it also possible to enhance the single responsibility part since the obstacles, portals and platforms all has their own collision strategy.
+
+\subsubsection{Movement}
+As in Galaga we chose to use movement strategies. This enhance the ability to meet all cases of movement, since we then could specify a movement pattern when we are near a platform and when we are not. The OnPlatform movement pattern, takes a shape of the platform that the taxi are in the vicinity of and then hold the information need to easily check if the taxi collides with it or lands on it, without having to do it with every platform. Since the taxi change pattern depening on it location, it automatically update which platform it is in the vicinity of.
+
+\subsection{10g Implementation}
+We did not finish the implementation of this exercises, most part of the Customers class are implemented, We chose to use a class which handle all about customers. This simplified the parsing from the file, and the handling of customers in general. The Score would have been a class with a integer attribute score, three methods GetScore, AddToScore and Render. 
+
+\subsection{Ambiguities in exercise sets}
+Perhaps the most significant ambiguity in this particular exercise set was when we had to implement physics. We got confused by NewtonianForce class in DIKUArcade and thought that it was from that class that we needed to build further upon. This was not the case and the real solution turned out to be few lines of code in our Player class and our implemented TrivialMovement class. This code snippets can be seen below and is found in at lines 58 and 59 in Player.cs in SpaceTaxi:\\
+
+\textbf{Player}:
+\small{
+\begin{lstlisting}
+Vec2F ThrusterDirection = new Vec2F(0.0f, 0.0f);
+Vec2F GravityDirection = new Vec2F(0.0f, GameConstants.GRAVITY);
+\end{lstlisting}
+}
+
+\textbf{TrivialMovement} (line 12 to 30 in TrivialMovement.cs):
+\small{
+\begin{lstlisting}
+var shape = (DynamicShape) Player.GetInstance().Entity.Shape;
+
+var updates = Game.GameTimer.CapturedUpdates;
+
+Vec2F thrusterDirection = Player.GetInstance().Thruster;
+Vec2F gravityDirection = new Vec2F(0.0f, GameConstants.GRAVITY);
+
+float relativeSpeed = 1.0f;
+
+// Using GameTimer.CapturedUpdates to calculate how many
+// updates happened during the lastsecond.
+if (updates > 0) {
+relativeSpeed = 60.0f / updates;
+}
+
+shape.Direction.X += (thrusterDirection.X + gravityDirection.X) * relativeSpeed;
+shape.Direction.Y += (thrusterDirection.Y + gravityDirection.Y) * relativeSpeed;
+
+shape.Move();
+\end{lstlisting}
+<<<<<<< HEAD:SU18-Exercises/Exam2018/Rapport/latex/Evaluation.tex
+
+\end{document}
+=======
+}
+>>>>>>> cf292befba5a6c769d604a223aa965783f850aa4:SU18-Exercises/Exam-2018/Rapport/latex/Evaluation.tex
