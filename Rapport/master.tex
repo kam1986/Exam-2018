@@ -2,19 +2,57 @@
 
 \usepackage{su18}
 
+
+
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\usepackage{listings}
+\lstset{language=[Sharp]C,
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	escapeinside={(*@}{@*)},
+	commentstyle=\color{greencomments},
+	keywordstyle=\color{bluekeywords}\bfseries,
+	stringstyle=\color{redstrings},
+	basicstyle=\ttfamily,
+	numbers=left
+}
+
+\usepackage[makeroom]{cancel}
+\setlength\parindent{0pt}
+\usepackage{float}
+
+
+
+% Tables
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{boldline}
+\usepackage{tabu}
+
 \input{latex/preamble.tex}
 \graphicspath{ {./Pictures/} {./code/}}
 \begin{document}
 
 \maketitle
 
+<<<<<<< HEAD
 \begin{center}
 	\textbf{Git url}\\
 	\url{https://github.com/kam1986/Exam-2018.git}
 \end{center}
+=======
+>>>>>>> 3430b42b00d7885f50b96b75f7c3c17261ea6149
+
+\center\textbf{Git url}\\
+\center\url{https://github.com/kam1986/Exam-2018.git}\\
 
 \newpage
-
 \subfile{latex/Introduction}
 
 \subfile{latex/Background}
@@ -28,6 +66,7 @@
 \subfile{latex/UserGuide}
 
 \subfile{latex/Evaluation}
+
 
 \subfile{latex/Conclusion}
 

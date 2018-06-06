@@ -1,9 +1,0 @@
-
-Package Fancyhdr Warning: \headheight is too small (20.0pt): 
- Make it at least 67.1553pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
